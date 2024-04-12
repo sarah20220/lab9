@@ -1,15 +1,7 @@
-# function for encode option
-def encoder(password):
-	# new string
-	encoded = ""
-	# loop to iterate through each character in the string
-	for i in password:
-		# shift each digit up by 3
-		shift_up = str((int(i) + 3))
-		# append to new string
-		encoded += shift_up
-	return encoded
+#  S's code
 
+
+# NJ's code
 # function for decode option
 def decode(encoded):
 	# new string
