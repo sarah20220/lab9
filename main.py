@@ -1,5 +1,11 @@
-#  S's code
+#  Sarah's code
+def encode(password):
+    encoded = ""
 
+    for i in password:
+        shift = str((int(i) + 3))
+        encoded += shift
+    return encoded
 
 # NJ's code
 # function for decode option
@@ -28,18 +34,25 @@ def main():
     option = None
     while option != 3:
         print_menu()
-        try:
-            option = int(input("Please enter an option: "))
-        except ValueError:
-            pass
+        encoded = None
+        option = int(input("Please enter an option: "))
+
         if option == 1:
-            pass
+            password = input("Please enter your password to encode: ")
+            encoded = encode(password)
+            print("Your password has been encoded and stored!\n")
+
         elif option == 2:
-            pass
+            if encoded == None:
+                print("Error! Password hasn't been encoded.")
+            else:
+                decoded = decode(encoded)
+                print(f"The encoded password is: {encoded}, and the original password is {decoded}")
+
         elif option == 3:
             pass
         else:
-            pass
+            print("Error! Invalid option!")
         print()
 
 
